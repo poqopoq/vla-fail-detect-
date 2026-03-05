@@ -53,7 +53,7 @@ class DiffusionUnetHybridImagePolicy(BaseImagePolicy):
         self.num_rep = 1
         self.separate = False
         self.global_eps = None
-        tasks = {10: 'square', 20: 'transport', 10: 'tool_hang', 10: 'lift', 10: 'can'}
+        tasks = {10: 'square', 20: 'transport', 10: 'tool_hang', 10: 'lift', 10: 'can', 7: 'libero'}
         self.task = tasks[action_dim]
         obs_key_shapes = dict()
         for key, attr in obs_shape_meta.items():

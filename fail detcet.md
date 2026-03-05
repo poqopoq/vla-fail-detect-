@@ -45,3 +45,6 @@ python benchmark_scripts/render_single_task.py --benchmark_name libero_10 --task
 
 
 训练policy 时也训练了obs_encoder 但是没有只能随机
+
+
+obs 拆分送入encoder

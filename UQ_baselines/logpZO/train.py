@@ -50,6 +50,7 @@ if __name__ == "__main__":
         }
         torch.save(ckpt, ckpt_file)
 
+
         net.train()
         loss_i = []
         for (x_batch, ) in tqdm.tqdm(train_loader, desc='Training Batches'):
@@ -78,3 +79,6 @@ if __name__ == "__main__":
         os.makedirs('images', exist_ok=True)
         plt.savefig(f"images/training_loss_{suffix}.png")
         plt.close('all')
+
+
+

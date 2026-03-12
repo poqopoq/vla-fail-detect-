@@ -101,3 +101,8 @@ def test():
     mat_det = np.linalg.det(mat)
     assert np.allclose(mat_det, 1)
     # rotaiton_6d will be normalized to rotation matrix
+
+
+
+rot_out = rotation_transformer.forward(rot)
+print(rot_out.shape)

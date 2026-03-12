@@ -15,3 +15,9 @@ __pycache__/
 *.cpython
 *.png
 ref_for_myself.md
+mujoco210-linux-x86_64.tar.gz
+data/robomimic/datasets/square/ph/image_abs.hdf5
+data/robomimic/datasets/square/ph/image_abs.hdf5.zarr.zip
+.gitignore
+.gitignore
+data/robomimic/datasets/square/ph/low_dim.hdf5

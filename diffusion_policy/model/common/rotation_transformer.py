@@ -104,5 +104,3 @@ def test():
 
 
 
-rot_out = rotation_transformer.forward(rot)
-print(rot_out.shape)

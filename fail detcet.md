@@ -112,3 +112,6 @@ states: (127, 45), dtype=float64
 
 
 python workspace/train_diffusion_unet_hybrid_workspace_get_data_libero.py   --config-path /home/zhiyuanjia/FAIL-Detect/diffusion_policy/configs_robomimic   --config-name image_square_ph_visual_diffusion_policy_cnn_for_libero
+
+
+/home/zhiyuanjia/FAIL-Detect/outputs/2026-03-19/04-07-51/demo0_fail.pt

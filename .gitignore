@@ -13,7 +13,7 @@
 *.pyc
 __pycache__/
 *.cpython
-*.png
+
 ref_for_myself.md
 mujoco210-linux-x86_64.tar.gz
 data/robomimic/datasets/square/ph/image_abs.hdf5

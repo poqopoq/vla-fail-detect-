@@ -88,7 +88,7 @@ reshape action
    ↓
 Y
    ↓
-torch.save(X,Y)
+torch.save(X,Y)   Full X: torch.Size([12833, 272]) 
 
 
 Keys in demo_0: ['actions', 'dones', 'next_obs', 'obs', 'rewards', 'states']
@@ -111,7 +111,48 @@ states: (127, 45), dtype=float64
 
 
 
-python workspace/train_diffusion_unet_hybrid_workspace_get_data_libero.py   --config-path /home/zhiyuanjia/FAIL-Detect/diffusion_policy/configs_robomimic   --config-name image_square_ph_visual_diffusion_policy_cnn_for_libero
+python workspace/train_diffusion_unet_hybrid_workspace_get_data_libero.py   --config-path /home/zhiyuanjia/FAIL-Detect/diffusion_policy/configs_robomimic   --config-name image_square_ph_visual_diffusion_policy_cnn_for_libero   get global_cond the input of training 
+
+python workspace/train_diffusion_unet_hybrid_workspace_get_data_libero_allcond.py   --config-path /home/zhiyuanjia/FAIL-Detect/diffusion_policy/configs_robomimic   --config-name image_square_ph_visual_diffusion_policy_cnn_for_libero   get all step cond
 
 
 /home/zhiyuanjia/FAIL-Detect/outputs/2026-03-19/04-07-51/demo0_fail.pt
+
+
+observation comes from diffusion_policy/env_runner/robomimic_image_runner_FAIL-Detect.py baseline_metric = elb.logpZO_UQ(self.baseline_model_logpZO, 
+                                 action_dict['global_cond'], 
+                                 task_name = self.task_name)    
+                                 
+observation = action_dict['global_cond']
+
+
+action_dict['global_cond'] comes from DiffusionUnetHybridImagePolicy  shape (B, obs_feature_dim * n_obs_steps)  [B, feature_dim * To]
+
+
+
+Raw Observations (images + robot state)
+    ↓
+policy.predict_action(obs_dict)
+    ↓
+obs_encoder (vision encoder)
+    ↓
+action_dict['global_cond'] (encoded features)  [n_envs, feature_dim]  batch_size = n_envs
+    ↓
+baseline_model(global_cond, timesteps=0)  (CFM model)
+    ↓
+pred_v (velocity/flow prediction)
+    ↓
+observation_updated = global_cond + pred_v
+    ↓
+logpZO = sum_of_squares(observation_updated)  [n_envs]
+    ↓
+Score stored in logpZO_local_slices
+
+
+Timestep t=0:
+├── Get observation → action_dict → global_cond
+├── logpZO_UQ(global_cond) → score₀ (shape: n_envs)
+│   e.g., tensor([0.32, 0.51, 0.40])
+├── logpZO_local_slices.append(score₀)
+│   logpZO_local_slices = [score₀]
+└── Step environment

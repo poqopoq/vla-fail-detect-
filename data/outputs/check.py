@@ -14,10 +14,8 @@ def adjust_xshape(x, in_dim):
         x = torch.cat([x, torch.zeros(x.shape[0], extra_pad, device=x.device)], dim=1)
     return x.reshape(x.shape[0], -1, in_dim)
 
-def get_data(type='square', adjust_shape = True, diffusion = False):
+def get_data(data, type='square', adjust_shape = True, diffusion = False):
     suffix = '_diffusion' if diffusion else '_flow'
-    filename = f'{type}_data{suffix}.pt'
-    data = torch.load(f'../../data/outputs/{filename}')
     X, Y = data['X'], data['Y']
     in_dim_dict = {'square': 10, 'transport': 20, 'tool_hang': 20, 'can': 10}
     in_dim = in_dim_dict[type]
@@ -26,7 +24,10 @@ def get_data(type='square', adjust_shape = True, diffusion = False):
     return X, Y
 
 
-data = torch.load('/home/zhiyuanjia/FAIL-Detect/data/outputs/square_data_diffusion_scaling.pt')
-X, Y = get_data(type='square', adjust_shape=True, diffusion=True)
+data = torch.load('/home/zhiyuanjia/FAIL-Detect/outputs/2026-03-19/04-07-51/demo0_fail.pt')
+X, Y = get_data(data, type='square', adjust_shape=True, diffusion=True)
 global_cond_dim = X.shape[1]; input_dim = Y.reshape(Y.shape[0], 16, -1).shape[-1]
 print(f'Current feature shape: {global_cond_dim}')
+
+print(f'Current input feature shape: {X.shape}')
+print(f'Current input feature shape: {input_dim}')

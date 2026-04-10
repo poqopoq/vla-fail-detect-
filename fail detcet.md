@@ -156,3 +156,23 @@ Timestep t=0:
 ├── logpZO_local_slices.append(score₀)
 │   logpZO_local_slices = [score₀]
 └── Step environment
+
+
+lerobot-eval \
+  --policy.path=lerobot/pi0_libero_finetuned_v044 \
+  --env.type=libero \
+  --env.task=libero_10 \
+  --env.task_ids="[7]" \
+  --eval.n_episodes=1 \
+  --eval.batch_size=1 \
+  --output_dir=./traj
+
+
+
+
+  steps
+
+  1 generate trajactory in libero repo with the file create_fail_trajactory.py (.hdf5)
+  2 copy and change the file in the config (FAIL-Detect/diffusion_policy/configs_robomimic/image_square_ph_visual_diffusion_policy_cnn_for_libero.yaml) dataset_path: (3 needs to change) (.hdf5)
+  3 run (FAIL-Detect/diffusion_policy/workspace/train_diffusion_unet_hybrid_workspace_get_data_libero.py) to get .pt file 
+  4 change the .pt file in /FAIL-Detect/UQ_test/test_for_libero.py to get the result

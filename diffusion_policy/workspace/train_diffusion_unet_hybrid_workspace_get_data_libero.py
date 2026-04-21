@@ -95,7 +95,7 @@ class TrainDiffusionUnetHybridWorkspace(BaseWorkspace):
         print(f'Full X: {full_x.shape}, Full Y: {full_y.shape}')
         
 
-        save_path = os.path.join(self.output_dir, 'full_data.pt')
+        save_path = os.path.join(self.output_dir, 'full_data_halfsuccess.pt')
         os.makedirs(self.output_dir, exist_ok=True)
         torch.save({'X': full_x, 'Y': full_y}, save_path)
         print(f'Full data saved to {save_path}')

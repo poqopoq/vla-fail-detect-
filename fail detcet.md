@@ -217,3 +217,19 @@ test result
     "n_episodes": 400,
     "eval_s": 7697.843988895416,
     "eval_ep_s": 19.244609975814818,
+
+
+execute(a1)
+execute(a2)
+execute(a3) ...
+detect fail 
+replan() not fixed chunk  
+
+
+1. 成功/失败轨迹 → DPO训练
+2. Fail Detector → Reward Model
+3. Fail Detector → Value Head
+4. Reflection → Failure Type分类
+5. Reflection → 文本Memory
+
+6. https://m80hz.github.io/kite/

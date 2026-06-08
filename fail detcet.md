@@ -184,3 +184,36 @@ lerobot-eval \
 
 Aggregated Metrics for per_task:
 [{'task_group': 'libero_10', 'task_id': 7, 'metrics': {'sum_rewards': [0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0], 'max_rewards': [0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0], 'successes': [False, True, True, False, False, False, False, True, False, False, True, False, False, False, True, True, False, False, False, True, False, False, False, False, False, True, False, True, False, True, False, False, True, False, False, False, False, False, False, False, False, False, False, False, False, False, True, False, False, False], 'video_paths': ['test_traj/videos/libero_10_7/eval_episode_0.mp4', 'test_traj/videos/libero_10_7/eval_episode_1.mp4', 'test_traj/videos/libero_10_7/eval_episode_2.mp4', 'test_traj/videos/libero_10_7/eval_episode_3.mp4', 'test_traj/videos/libero_10_7/eval_episode_4.mp4', 'test_traj/videos/libero_10_7/eval_episode_5.mp4', 'test_traj/videos/libero_10_7/eval_episode_6.mp4', 'test_traj/videos/libero_10_7/eval_episode_7.mp4', 'test_traj/videos/libero_10_7/eval_episode_8.mp4', 'test_traj/videos/libero_10_7/eval_episode_9.mp4'], 'trajectory_paths': ['test_traj/trajectories/libero_10_7/episode_000.hdf5', 'test_traj/trajectories/libero_10_7/episode_001.hdf5', 'test_traj/trajectories/libero_10_7/episode_002.hdf5', 'test_traj/trajectories/libero_10_7/episode_003.hdf5', 'test_traj/trajectories/libero_10_7/episode_004.hdf5', 'test_traj/trajectories/libero_10_7/episode_005.hdf5', 'test_traj/trajectories/libero_10_7/episode_006.hdf5', 'test_traj/trajectories/libero_10_7/episode_007.hdf5', 'test_traj/trajectories/libero_10_7/episode_008.hdf5', 'test_traj/trajectories/libero_10_7/episode_009.hdf5', 'test_traj/trajectories/libero_10_7/episode_010.hdf5', 'test_traj/trajectories/libero_10_7/episode_011.hdf5', 'test_traj/trajectories/libero_10_7/episode_012.hdf5', 'test_traj/trajectories/libero_10_7/episode_013.hdf5', 'test_traj/trajectories/libero_10_7/episode_014.hdf5', 'test_traj/trajectories/libero_10_7/episode_015.hdf5', 'test_traj/trajectories/libero_10_7/episode_016.hdf5', 'test_traj/trajectories/libero_10_7/episode_017.hdf5', 'test_traj/trajectories/libero_10_7/episode_018.hdf5', 'test_traj/trajectories/libero_10_7/episode_019.hdf5', 'test_traj/trajectories/libero_10_7/episode_020.hdf5', 'test_traj/trajectories/libero_10_7/episode_021.hdf5', 'test_traj/trajectories/libero_10_7/episode_022.hdf5', 'test_traj/trajectories/libero_10_7/episode_023.hdf5', 'test_traj/trajectories/libero_10_7/episode_024.hdf5', 'test_traj/trajectories/libero_10_7/episode_025.hdf5', 'test_traj/trajectories/libero_10_7/episode_026.hdf5', 'test_traj/trajectories/libero_10_7/episode_027.hdf5', 'test_traj/trajectories/libero_10_7/episode_028.hdf5', 'test_traj/trajectories/libero_10_7/episode_029.hdf5', 'test_traj/trajectories/libero_10_7/episode_030.hdf5', 'test_traj/trajectories/libero_10_7/episode_031.hdf5', 'test_traj/trajectories/libero_10_7/episode_032.hdf5', 'test_traj/trajectories/libero_10_7/episode_033.hdf5', 'test_traj/trajectories/libero_10_7/episode_034.hdf5', 'test_traj/trajectories/libero_10_7/episode_035.hdf5', 'test_traj/trajectories/libero_10_7/episode_036.hdf5', 'test_traj/trajectories/libero_10_7/episode_037.hdf5', 'test_traj/trajectories/libero_10_7/episode_038.hdf5', 'test_traj/trajectories/libero_10_7/episode_039.hdf5', 'test_traj/trajectories/libero_10_7/episode_040.hdf5', 'test_traj/trajectories/libero_10_7/episode_041.hdf5', 'test_traj/trajectories/libero_10_7/episode_042.hdf5', 'test_traj/trajectories/libero_10_7/episode_043.hdf5', 'test_traj/trajectories/libero_10_7/episode_044.hdf5', 'test_traj/trajectories/libero_10_7/episode_045.hdf5', 'test_traj/trajectories/libero_10_7/episode_046.hdf5', 'test_traj/trajectories/libero_10_7/episode_047.hdf5', 'test_traj/trajectories/libero_10_7/episode_048.hdf5', 'test_traj/trajectories/libero_10_7/episode_049.hdf5']}}]
+
+
+
+test result
+    "libero_spatial": 
+      "avg_sum_reward": 0.99,
+      "avg_max_reward": 0.99,
+      "pc_success": 99.0,
+      "n_episodes": 100,
+    "libero_object": 
+      "avg_sum_reward": 1.0,
+      "avg_max_reward": 1.0,
+      "pc_success": 100.0,
+      "n_episodes": 100,
+    "libero_goal": 
+      "avg_sum_reward": 0.96,
+      "avg_max_reward": 0.96,
+      "pc_success": 96.0,
+      "n_episodes": 100,
+
+    "libero_10": 
+      "avg_sum_reward": 0.95,
+      "avg_max_reward": 0.95,
+      "pc_success": 95.0,
+      "n_episodes": 100,
+
+    "overall": 
+    "avg_sum_reward": 0.975,
+    "avg_max_reward": 0.975,
+    "pc_success": 97.5,
+    "n_episodes": 400,
+    "eval_s": 7697.843988895416,
+    "eval_ep_s": 19.244609975814818,
